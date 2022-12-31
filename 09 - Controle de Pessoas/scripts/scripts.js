@@ -52,6 +52,25 @@ function otherFunction() {
 }
 
 function handleSavePeople() {
+    let name = document.querySelector('#name').value
+    let ocupation = document.querySelector('#ocupation').value
+    let contact = document.querySelector('#contact').value
+
+    if (!name) {
+        alert("Por gentileza, insira um nome válido!")
+        return
+    }
+
+    if (!ocupation) {
+        alert("Por gentileza, insira uma ocupação válida!")
+        return
+    }
+
+    if (!contact) {
+        alert("Por gentileza, insira um contato válido!")
+        return
+    }
+
     saveRegisterButton = document.querySelector('#saveRegisterButton')
     saveRegisterButton.style.display = "none"
 
