@@ -1,0 +1,151 @@
+.container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    position: relative;
+}
+
+main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+#pageTopImage {
+    width: 100%;
+    height: 25rem;
+
+    background: url(../../assets/images/homeTopBackg2.jpg) no-repeat center/cover;
+}
+
+@media (max-width: 825px) {
+    #pageTopImage {
+        height: 18rem;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+#cardsContainer {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#cardsContainer h2 {
+    margin: 6rem 0 6rem 0;
+}
+
+#lineOfCardsContainer {
+    width: 100%;
+}
+
+#lineOfHighLightCards {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem 2rem;
+}
+
+#lineOfSneacksCards {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem 2rem;
+}
+
+#lineOfDrinksCards {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem 2rem;
+}
+
+#card {
+    width: 100%;
+    max-width: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+#productImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 15rem;
+    overflow: hidden;
+
+    margin: -5rem 0 0 0;
+}
+
+#productImage img {
+    width: 100%;
+    max-width: 200px;
+
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+#productInfos {
+    padding: 1rem 1rem 3.5rem 1rem;
+}
+
+#productName {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#productInfos p {
+    font-size: 0.9rem;
+    margin: 1rem 0 0 0;
+}
+
+#prices {
+    display: flex;
+    gap: 2rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#prices span:first-child {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1020px) {
+    #cardsContainer {
+        padding: 0 1rem;
+    }
+
+    #lineOfCardsContent {
+        gap: 6rem 2rem;
+    }
+}

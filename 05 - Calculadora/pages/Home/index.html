@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../globalStyles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Title -->
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+
+            <div class="titleDescriptions">
+                <h2>Calculadora</h2>
+            </div>
+
+            <div class="display">
+                <p id="displayNumbers"></p>
+                <p id="displayTotal">Total</p>
+            </div>
+
+            <div class="allLineButtons">
+                <div class="fisrtLineButtons">
+                    <button type="button" class="ACButtons" onclick="deleteCaracter()">&lt;</button>
+                    <button type="button" class="ACButtons" onclick="clearDisplay()">C</button>
+                    <button type="button" onclick="TurnOn()">ON</button>
+                    <button type="button" onclick="TurnOff()">OFF</button>
+                </div>
+
+                <div class="lineButtons">
+                    <button type="button" onclick="insertNumberOrOperator(7)">7</button>
+                    <button type="button" onclick="insertNumberOrOperator(8)">8</button>
+                    <button type="button" onclick="insertNumberOrOperator(9)">9</button>
+                    <button type="button" onclick="insertNumberOrOperator('/')">/</button>
+                </div>
+
+                <div class="lineButtons">
+                    <button type="button" onclick="insertNumberOrOperator(4)">4</button>
+                    <button type="button" onclick="insertNumberOrOperator(5)">5</button>
+                    <button type="button" onclick="insertNumberOrOperator(6)">6</button>
+                    <button type="button" onclick="insertNumberOrOperator('*')">X</button>
+                </div>
+
+                <div class="lineButtons">
+                    <button type="button" onclick="insertNumberOrOperator(1)">1</button>
+                    <button type="button" onclick="insertNumberOrOperator(2)">2</button>
+                    <button type="button" onclick="insertNumberOrOperator(3)">3</button>
+                    <button type="button" onclick="insertNumberOrOperator('-')">-</button>
+                </div>
+
+                <div class="lineButtons">
+                    <button type="button" onclick="insertNumberOrOperator(0)">0</button>
+                    <button type="button" onclick="insertNumberOrOperator('.')">.</button>
+                    <button type="button" onclick="calculateDisplay()">=</button>
+                    <button type="button" onclick="insertNumberOrOperator('+')">+</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../scripts/scripts.js"></script>
+
+</body>
+
+</html>

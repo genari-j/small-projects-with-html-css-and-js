@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../globalStyles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/e8ac874b2c.js" crossorigin="anonymous"></script>
+    <title>Caixa Familiar - Gerencie seus ganhos & depesas</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h2>Caixa Familiar</h2>
+            <p>Gerencie seus ganhos & depesas</p>
+        </header>
+
+        <div class="content">
+
+            <main>
+                <div class="earningsAndExpensesBox">
+                    <div id="earningsTotal">
+                        <span>Total disponível:</span>
+                        <span id="numberOfEarningsTotal">R$: 0,00</span>
+                    </div>
+
+                    <div id="expensesTotal">
+                        <span>Total despesas:</span>
+                        <span id="numberOfExpensesTotal">R$: 0,00</span>
+                    </div>
+                </div>
+
+                <div class="formDataBox">
+                    <label for="earnings">Ganhos:</label>
+                    <div class="earningsInput">
+                        <input type="number" name="earnings" id="earnings" placeholder="Entradas">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+
+                    <label for="expenses">Despesas:</label>
+                    <div class="expensesInput">
+                        <input type="number" name="expenses" id="expenses" placeholder="Saídas">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+
+                    <button type="button" onclick="calculateFamilyBalance()">Registrar</button>
+                </div>
+            </main>
+
+        </div>
+
+        <footer>
+            <span>© Copyright 2022 - Caixa Familiar</span>
+            <span>Todos os direitos reservados.</span>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../scripts/scripts.js"></script>
+</body>
+
+</html>

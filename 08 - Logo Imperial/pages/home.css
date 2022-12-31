@@ -1,0 +1,111 @@
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(40, 38, 38);
+}
+
+.ImperialContainer {
+    width: 15rem;
+    height: 17rem;
+
+    position: relative;
+
+    background: rgb(51, 210, 51);
+}
+
+.capLeftTop {
+    width: 6.6rem;
+    height: 6rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: rotate(312deg);
+
+    margin: -2.56rem 0 0 -1.22rem;
+
+    background: rgb(40, 38, 38);
+}
+
+.capRightTop {
+    width: 6.6rem;
+    height: 6rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: rotate(408deg);
+
+    margin: -2.54rem -1.26rem 0 0;
+
+    background: rgb(40, 38, 38);
+}
+
+.middleColumn {
+    width: 2rem;
+    height: 100%;
+
+    position: absolute;
+    right: 6.5rem;
+
+    background: rgb(40, 38, 38);
+}
+
+.leftColumn {
+    width: 4.5rem;
+    height: 2.2rem;
+
+    position: absolute;
+    top: 9rem;
+    left: 2rem;
+
+    transform: skewY(390deg);
+
+    background: rgb(40, 38, 38);
+}
+
+.rightColumn {
+    width: 4.5rem;
+    height: 2.2rem;
+
+    position: absolute;
+    top: 9rem;
+    right: 2rem;
+
+    transform: skewY(330deg);
+
+    background: rgb(40, 38, 38);
+}
+
+.capLeftBottom {
+    width: 6.5rem;
+    height: 6rem;
+
+    position: absolute;
+    bottom: -3.3rem;
+    left: 0;
+
+    transform: skewY(400deg);
+
+    background: rgb(40, 38, 38);
+}
+
+.capRightBottom {
+    width: 6.5rem;
+    height: 6rem;
+
+    position: absolute;
+    bottom: -3.3rem;
+    right: 0;
+
+    transform: skewY(320deg);
+
+    background: rgb(40, 38, 38);
+}

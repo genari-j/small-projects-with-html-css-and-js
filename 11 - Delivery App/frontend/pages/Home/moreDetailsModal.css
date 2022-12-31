@@ -1,0 +1,91 @@
+#moreDetailsContainer {
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#moreDetailsContent {
+    width: 100%;
+    max-width: 600px;
+
+    position: relative;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0);
+}
+
+#moreDetailsContent h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+#moreDetailsContent p,
+span {
+    margin: 0 0 0 0.5rem;
+}
+
+#moreDetailsContent span {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+#moreDetailsContent img {
+    width: 100%;
+    max-width: 2.5rem;
+    height: 1.8rem;
+}
+
+#aboutStore {
+    margin: 1rem 0;
+}
+
+#ourAddress {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 1rem 0;
+}
+
+#openingHours {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 1rem 0;
+}
+
+#paymentMethods {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#paymentMethodsContent {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#paymentMethodsContent div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+#otherInformations {
+    margin: 1rem 0 0 0;
+}

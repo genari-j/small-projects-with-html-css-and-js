@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins&display=swap" rel="stylesheet" />
+    <!-- Metas -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Victor Genari">
+    <meta name="description"
+        content="O melhor delivery da região. Crie sua conta, faça seus pedidos, acompanhe e aproveite!">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../assets/icons/favicon.svg" type="image/x-icon" />
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/e8ac874b2c.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../globalStyles/globalStyles.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./mobileMenu.css">
+    <link rel="stylesheet" href="./accountModal.css">
+    <link rel="stylesheet" href="./createAccountModal.css">
+    <link rel="stylesheet" href="./moreDetailsModal.css">
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./deliveryInfos.css">
+    <link rel="stylesheet" href="./searchInput.css">
+    <link rel="stylesheet" href="./footer.css">
+    <!-- Title -->
+    <title>Delivery App</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- MobileMenu -->
+        <div id="mobileMenu">
+            <nav>
+                <ul>
+                    <a href="#">
+                        <li onclick="handleCloseMobileMenu()">
+                            <i class="fa-solid fa-house-chimney"></i> Home
+                        </li>
+                    </a>
+                    <a href="#highlights">
+                        <li onclick="handleCloseMobileMenu()">
+                            <i class="fa-solid fa-star"></i> Destaques
+                        </li>
+                    </a>
+                    <a href="#sneacks">
+                        <li onclick="handleCloseMobileMenu()">
+                            <i class="fa-solid fa-burger"></i> Lanches
+                        </li>
+                    </a>
+                    <a href="#drinks">
+                        <li onclick="handleCloseMobileMenu()">
+                            <i class="fa-solid fa-wine-bottle"></i> Bebidas
+                        </li>
+                    </a>
+                    <li onclick="handleCloseMobileMenu()">
+                        <i class="fa-solid fa-headset"></i> Suporte
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Account Modal -->
+        <div id="myAccountContainer">
+            <div id="myAccountContent">
+                <button type="button" id="btn-close" onclick="handleCloseMyAccountModal()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+
+                <h2>Login</h2>
+                <p>Acesse sua conta, faça seus pedidos, acompanhe e aproveite!</p>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="contato@email.com">
+
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" placeholder="Senha">
+
+                <button type="button" id="btn-login">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Entrar
+                </button>
+
+                <p id="YouAlreadyHaveAnAccount">Ainda não tem uma conta?<a href="#"
+                        onclick="handleOpenCreateAnAccountModal()">Criar</a></p>
+            </div>
+        </div>
+
+        <!-- Create Account Modal -->
+        <div id="createAnAccountContainer">
+            <div id="createAnAccountContent">
+                <button type="button" id="btn-close" onclick="handleCloseCreateAnAccount()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+
+                <h2>Crie uma conta</h2>
+                <p>Crie uma conta, faça seus pedidos, acompanhe e aproveite!</p>
+
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" placeholder="Nome">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="contato@email.com">
+
+                <label for="whatsapp">Whatsapp:</label>
+                <input type="text" name="whatsapp" id="whatsapp" placeholder="(11) 95555-4444">
+
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" placeholder="Senha">
+
+                <button type="button" id="btn-register">Registre-me</button>
+
+                <p id="login">Já possui uma conta?<a href="#"
+                        onclick="handleCloseCreateAnAccountAndOpenLoginModal()">Entrar</a></p>
+            </div>
+        </div>
+
+        <!-- More Details Modal -->
+        <div id="moreDetailsContainer">
+            <div id="moreDetailsContent">
+                <button type="button" id="btn-close" onclick="handleCloseMoreDetailsModal()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+
+                <h2>Delivery App:</h2>
+
+                <div id="aboutStore">
+                    <h3>Sobre:</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis eius laboriosam, doloribus
+                        deleniti cupiditate fugiat minus ad animi, temporibus, omnis quas! Dolorum laborum omnis
+                        debitis.
+                        Voluptatem asperiores molestias non quo. Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                        Reiciendis eius laboriosam, doloribus
+                        deleniti cupiditate fugiat minus.</p>
+                </div>
+
+                <div id="ourAddress">
+                    <h3>Endereço:</h3>
+                    <span>Estrada Egílio Vitorello, 780 - Jardim Maria Beatriz</span>
+                    <span>Carapicuíba</span>
+                    <span>CEP: 06365-210</span>
+                </div>
+
+                <div id="openingHours">
+                    <h3>Funcionamento:</h3>
+                    <span>Segunda-feira a Sábado</span>
+                    <span>17:30 às 02:00</span>
+                </div>
+
+                <div id="paymentMethods">
+                    <h3>Pagamentos:</h3>
+                    <div id="paymentMethodsContent">
+                        <div>
+                            <span>Crédito:</span>
+                            <span><img src="../../assets/icons/master.jpg" alt="Master Icon"> Mastercard</span>
+                            <span><img src="../../assets/icons/hiper.jpg" alt="Hiper Icon"> Hipercard</span>
+                            <span><img src="../../assets/icons/visa.jpg" alt="Visa Icon"> Visa</span>
+                            <span><img src="../../assets/icons/elo.jpg" alt="Elo Icon"> Elo</span>
+                        </div>
+
+                        <div>
+                            <span>Débito:</span>
+                            <span><img src="../../assets/icons/master.jpg" alt="Master Icon"> Mastercard</span>
+                            <span><img src="../../assets/icons/visa.jpg" alt="Visa Icon"> Visa</span>
+                            <span><img src="../../assets/icons/elo.jpg" alt="Elo Icon"> Elo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="otherInformations">
+                    <h3>Outras informações:</h3>
+                    <span>CNPJ: 00.000.000/0000-00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div id="companyLogo">
+                <img src="../../assets/images/motocycle.png" alt="Company Logo" />
+                <span>DeliveryApp.</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <a href="#">
+                        <li><i class="fa-solid fa-house-chimney"></i> Home</li>
+                    </a>
+                    <a href="#highlights">
+                        <li><i class="fa-solid fa-star"></i> Destaques</li>
+                    </a>
+                    <a href="#sneacks">
+                        <li><i class="fa-solid fa-burger"></i> Lanches</li>
+                    </a>
+                    <a href="#drinks">
+                        <li><i class="fa-solid fa-wine-bottle"></i> Bebidas</li>
+                    </a>
+                    <li><i class="fa-solid fa-headset"></i> Suporte</li>
+                </ul>
+            </nav>
+
+            <div id="userAccount">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="#" onclick="handleOpenMyAccountModal()">Minha conta</a>
+                </div>
+
+                <button id="mobileButton" onclick="handleOpenMobileMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <section id="pageTopImage"></section>
+
+            <section id="deliveryInfos">
+                <div>
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <span>Pedido mínimo</span>
+                    <span>R$: 18,00</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                    <span>20-30 min</span>
+                    <span>Grátis</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-arrow-down"></i>
+                    <span>Entrega</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-info"></i>
+                    <button type="button" onclick="handleOpenMoreDetailsModal()">
+                        <strong>Ver mais</strong>
+                    </button>
+                </div>
+            </section>
+
+            <section id="searchInputContainer">
+                <input type="search" id="searchInput" placeholder="Realize uma busca .." />
+                <button type="button" id="searchButton">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </section>
+
+            <section id="cardsContainer">
+                <div id="lineOfCardsContainer">
+                    <h2 id="highlights">Destaques</h2>
+                    <div id="lineOfHighLightCards"></div>
+
+                    <h2 id="sneacks">Lanches</h2>
+                    <div id="lineOfSneacksCards"></div>
+
+                    <h2 id="drinks">Bebidas</h2>
+                    <div id="lineOfDrinksCards"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div>
+                <span>Option 1</span>
+            </div>
+            <div>
+                <span>Option 2</span>
+            </div>
+            <div>
+                <span>Option 3</span>
+            </div>
+            <div>
+                <span>Option 4</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../scripts/scripts.js"></script>
+</body>
+
+</html>

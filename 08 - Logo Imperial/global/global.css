@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+a {
+    cursor: pointer;
+}

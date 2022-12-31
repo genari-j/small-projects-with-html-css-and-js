@@ -1,0 +1,228 @@
+/* All Page */
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    max-width: 900px;
+}
+
+
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0 0 10rem 10rem;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background: rgba(7, 65, 136, 0.5)
+}
+
+
+
+/* MAIN */
+main {
+    margin: 3rem 0;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.earningsAndExpensesBox {
+    height: 6rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    margin: 0 0 3rem 0;
+}
+
+#earningsTotal,
+#expensesTotal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#earningsTotal span:first-child,
+#expensesTotal span:first-child {
+    font-weight: 600;
+}
+
+#earningsTotal span:last-child,
+#expensesTotal span:last-child {
+    font-size: 1.1rem;
+}
+
+#earningsTotal {
+    background: rgba(7, 65, 136, 0.2);
+}
+
+#expensesTotal {
+    background: rgba(115, 16, 16, 0.2);
+}
+
+.formDataBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.formDataBox label {
+    font-size: 1rem;
+    margin: 0 0 0.3rem 0;
+}
+
+.earningsInput {
+    position: relative;
+}
+
+.earningsInput input {
+    width: 100%;
+
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+
+    border: 2px solid rgba(7, 65, 136, 0.5);
+}
+
+.earningsInput input:hover {
+    transition: .3s;
+    border: 2px solid rgba(7, 65, 136, 0.8);
+}
+
+.earningsInput input:focus {
+    transition: .3s;
+    border: 2px solid rgba(7, 65, 136, 0.8);
+    box-shadow: 0 0 0.3rem 0 rgba(7, 65, 136, 0.8);
+}
+
+.earningsInput input:focus+i {
+    color: rgba(7, 65, 136, 0.8);
+}
+
+.earningsInput i {
+    font-size: 1.3rem;
+
+    position: absolute;
+    top: 0.8rem;
+    left: 0.7rem;
+}
+
+.expensesInput {
+    position: relative;
+}
+
+.expensesInput input {
+    width: 100%;
+
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border-radius: 0.5rem;
+
+    border: 2px solid rgba(115, 16, 16, 0.4);
+}
+
+.expensesInput input:hover {
+    transition: .3s;
+    border: 2px solid rgba(115, 16, 16, 0.4);
+}
+
+.expensesInput input:focus {
+    transition: .3s;
+    border: 2px solid rgba(115, 16, 16, 0.4);
+    box-shadow: 0 0 0.3rem 0 rgba(115, 16, 16, 0.4);
+}
+
+.expensesInput input:focus+i {
+    color: rgba(115, 16, 16, 0.8);
+}
+
+.expensesInput i {
+    font-size: 1.3rem;
+
+    position: absolute;
+    top: 0.8rem;
+    left: 0.7rem;
+}
+
+.formDataBox button {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+
+    color: rgba(255, 255, 255);
+    background: rgba(7, 65, 136, 0.5)
+}
+
+.formDataBox button:hover {
+    transition: .3s;
+    cursor: pointer;
+
+    color: rgba(0, 0, 0);
+    background: rgba(7, 65, 136, 0.2);
+}
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 7rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0;
+
+    border-radius: 10rem 10rem 0 0;
+
+    background: rgba(7, 65, 136, 0.5)
+}
+
+footer span:nth-child(1) {
+    font-size: 0.9rem;
+}
+
+footer span:nth-child(2) {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+
+/* Responsive */
+@media (max-width: 980px) {
+    .content {
+        padding: 0 1rem;
+    }
+}

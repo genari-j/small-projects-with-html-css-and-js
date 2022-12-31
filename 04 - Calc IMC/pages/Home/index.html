@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../globalStyles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/e8ac874b2c.js" crossorigin="anonymous"></script>
+    <!-- Title -->
+    <title>Informações - IMC</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content">
+
+            <div class="titleAndPulse">
+                <h2>Saiba seu IMC</h2>
+                <div class="pulse"></div>
+            </div>
+
+            <label for="weight">Peso:</label>
+            <div>
+                <input type="text" name="weight" id="weight" placeholder="Peso">
+                <i class="fa-solid fa-weight-hanging"></i>
+            </div>
+
+            <label for="height">Altura:</label>
+            <div>
+                <input type="text" name="height" id="height" placeholder="Altura">
+                <i class="fa-solid fa-up-down"></i>
+            </div>
+
+            <div>
+                <p id="result"></p>
+            </div>
+
+            <button type="button" onclick="handleCalculateIMC()">Calcular</button>
+
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="../../scripts/scripts.js"></script>
+</body>
+
+</html>

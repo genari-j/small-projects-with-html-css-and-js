@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+
+    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a {
+    color: #000000;
+}

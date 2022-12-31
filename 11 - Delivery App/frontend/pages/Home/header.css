@@ -1,0 +1,112 @@
+header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 1rem 0;
+
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#companyLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    user-select: none;
+}
+
+#companyLogo img {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+#companyLogo span {
+    font-family: "Kalam", Arial, sans-serif;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+
+    font-size: 1.1rem;
+}
+
+header nav ul li {
+    cursor: pointer;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    border-bottom: 2px solid transparent;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+header nav ul li:hover {
+    transition: 0.3s;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+}
+
+#mobileButton {
+    display: none;
+
+    cursor: pointer;
+
+    background: transparent;
+}
+
+#userAccount {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    border-radius: 0.5rem;
+}
+
+#userAccount div {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#userAccount .fa-user {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: -0.1rem 0.5rem 0 0;
+    border-radius: 50%;
+
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+#userAccount a {
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#userAccount a:hover {
+    transition: 0.3s;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 935px) {
+    header {
+        justify-content: space-between;
+
+        padding: 1rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #mobileButton {
+        display: flex;
+
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
+}

@@ -1,0 +1,96 @@
+#myAccountContainer {
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#myAccountContent {
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0);
+}
+
+#btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    font-size: 1.8rem;
+
+    color: rgb(255, 255, 255);
+    background: transparent;
+}
+
+#btn-close:hover {
+    transition: .3s;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#myAccountContent h2 {
+    font-family: "Kalam", Arial, sans-serif;
+}
+
+#myAccountContent label {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.3rem 0;
+}
+
+#myAccountContent input {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0 0;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+}
+
+#btn-login:hover {
+    transition: .3s;
+    background: rgb(255, 255, 255, 0.5);
+}
+
+#YouAlreadyHaveAnAccount {
+    text-align: center;
+    margin: 0.8rem 0 0 0;
+}
+
+#YouAlreadyHaveAnAccount a {
+    font-weight: 600;
+    padding: 0 0.4rem;
+
+    border-bottom: 2px solid transparent;
+    color: rgb(255, 0, 0);
+}
+
+#YouAlreadyHaveAnAccount a:hover {
+    transition: .3s;
+    border-bottom: 2px solid rgb(255, 0, 0, 0.2);
+}
