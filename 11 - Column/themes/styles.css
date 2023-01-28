@@ -1,0 +1,44 @@
+@import url('./rootVariables.css');
+
+.container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem 0;
+
+    color: var(--white9);
+    background: var(--black8);
+}
+
+header {
+    width: 100%;
+    max-width: 1000px;
+
+    text-align: start;
+    padding: 0 0 2rem 0;
+}
+
+main {
+    width: 100%;
+    max-width: 1000px;    
+}
+
+main section {
+    width: 100%;
+
+    column-count: 4;
+    column-gap: 1.5rem;
+}
+
+main section img {
+    width: 100%;
+
+    margin: 0 0 1rem 0;
+    border-radius: 0.5rem;
+
+    border: 2px solid var(--black9);
+    box-shadow: 0 0 0.5rem 0 var(--white9);
+}
