@@ -49,6 +49,10 @@
 
 * Um projeto realizado apenas para entender melhor como funciona funções que recebem mais de um parâmetro;
 
+## Galeria de Imagens (Estilo Pinterest)
+
+* Projeto realizado para criar uma galeria de imagens com um formato parecido com o do Pinterest;
+
 ## Delivery App
 
 * Projeto iniciado/em andamento no intuito de montar um aplicação de Delivery;
