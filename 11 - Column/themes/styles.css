@@ -42,3 +42,22 @@ main section img {
     border: 2px solid var(--black9);
     box-shadow: 0 0 0.5rem 0 var(--white9);
 }
+
+
+@media (max-width: 1040px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 750px) {
+    main section {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 310px) {
+    main section {
+        column-count: 1;
+    }
+}
