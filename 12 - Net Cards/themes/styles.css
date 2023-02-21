@@ -1,0 +1,120 @@
+@import url('./rootVariables.css');
+
+html {
+    background: var(--black8);
+}
+
+.container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 6rem 1rem 2rem 1rem;
+}
+
+.content {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    background: var(--black9);
+    box-shadow: 0 0 0.5rem 0 var(--black9);
+}
+
+.content>div {
+    width: 100%;
+    max-width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    padding: 1rem 1rem 5rem 1rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 0.5rem 0 var(--black9);
+    background: var(--black5);
+}
+
+.hideCard {
+    transition: 1s;
+    opacity: 0;
+}
+
+.content>div i {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+
+    text-shadow: 2px 3px 3px var(--black4);
+}
+
+.content>div h3 {
+    margin: 0 0 1rem 0;
+}
+
+.content>div div {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1.5rem 0;
+}
+
+.content>div button {
+    width: 90%;
+
+    position: absolute;
+    bottom: 1rem;
+
+    padding: 0.3rem 0;
+    border-radius: 0.5rem;
+
+    font-family: 'Kalam', 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    border: 2px solid transparent;
+    background: var(--black4);
+}
+
+.content>div button:hover {
+    transition: .3s;
+
+    border: 2px solid var(--black4);
+    background: var(--black5);
+}
+
+.reviewButton {
+    font-family: 'Kalam', 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+
+    border: 2px solid transparent;
+    box-shadow: 0 0 0.5rem 0 var(--black9);
+    color: var(--white9);
+    background: var(--black9);
+}
+
+.reviewButton:hover {
+    transition: .3s;
+
+    border: 2px solid var(--white9);
+    background: var(--black8);
+}

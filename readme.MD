@@ -53,6 +53,16 @@
 
 * Projeto realizado para criar uma galeria de imagens com um formato parecido com o do Pinterest;
 
+## Net Cards
+
+* Um projeto desenvolvido para simular um ambiente em que o usuário possa ver cartões com planos de internet;
+* Ao selecionar um dos planos, os demais cartões deixam de aparecer na tela;
+
+## Diamond CSS
+
+* Um projeto criado apenas na intenção de treinar CSS;
+* A ideia foi apenas criar uma pedra de dimante;
+
 ## Delivery App
 
 * Projeto iniciado/em andamento no intuito de montar um aplicação de Delivery;
