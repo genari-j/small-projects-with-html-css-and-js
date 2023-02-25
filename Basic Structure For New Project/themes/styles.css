@@ -1,0 +1,25 @@
+@import url('./rootVariables.css');
+
+/* Elementos com essa clase, irão existir
+Porém não serão visíveis no projeto
+Os elementos passam a ficar visíveis somente no
+Screen Reader */
+.screenReadersOnly {
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+
+    padding: 0;
+    margin: -1px;
+    border-width: 0;
+}
+
+.container {
+    width: 100%;
+
+    border: 2px solid var(--black9);
+}

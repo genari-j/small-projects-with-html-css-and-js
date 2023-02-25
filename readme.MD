@@ -2,6 +2,10 @@
 
 * Alguns mini projetos utilizando somente HTML, CSS e Javascript ..
 
+## Basic Structure For New Project
+* Um projeto criado no intuito de manter uma estrutura base para iniciar novos projetos;
+* Dessa forma, temos agilidade ao iniciar novos layouts;
+
 ## Glassmorphism
 
 * Aplicando um efeito de vidro em qualquer lugar da aplicação;
