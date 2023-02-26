@@ -4,7 +4,7 @@
 
 ## Basic Structure For New Project
 * Um projeto criado no intuito de manter uma estrutura base para iniciar novos projetos;
-* Dessa forma, temos agilidade ao iniciar novos layouts;
+* Dessa forma, temos agilidade ao iniciar novas aplicações;
 
 ## Glassmorphism
 
