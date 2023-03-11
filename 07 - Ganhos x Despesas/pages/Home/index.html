@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <!-- Metas -->
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='author' content='João Victor Genari'>
+    <meta name='description' content='Um sistema para facilitar o controle de Ganhos e Despesas conforme registrados.'>
+    <meta name='keywords' content='Ganhos, Despesas, Finanças, Gastos, Valor, Financeiro'>
+    <!-- Google Fonts -->
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link
+        href='https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Montserrat&family=Poppins&family=Roboto&display=swap'
+        rel='stylesheet'>
+    <!-- Scripts -->
+    <script src="../../scripts/scripts.js" defer></script>
+    <!-- CSS -->
+    <link rel='stylesheet' href='../../themes/global.css'>
+    <link rel='stylesheet' href='../../themes/styles.css'>
+    <!-- Favicon -->
+    <link rel='shortcut icon' href='../../assets/icons/favicon.svg' type='image/x-icon'>
+    <!-- Icons -->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <!-- Title -->
+    <title>Ganhos x Despesas - Tenha maior controle sobre sua vida financeira</title>
+
+    <head>
+
+    <body>
+        <div class='container'>
+
+            <header>
+                <h2>Ganhos x Despesas</h2>
+                <p>Tenha maior controle sobre sua vida financeira</p>
+            </header>
+
+            <main>
+                <div class="cardsContainer">
+                    <div class="card">
+                        <span>Ganhos:</span>
+                        <p id="earningsTotal">R$ 0,00</p>
+                    </div>
+
+                    <div class="card">
+                        <span>Despesas:</span>
+                        <p id="expensesTotal">R$ 0,00</p>
+                    </div>
+
+                    <div class="card">
+                        <span>Disponível:</span>
+                        <p id="totalAvailable">R$ 0,00</p>
+                    </div>
+                </div>
+
+                <div class="formContainer">
+                    <div>
+                        <img src="../../assets/images/finances-animated.gif" alt="Finanças Gif">
+                    </div>
+                    <form>
+                        <fieldset>
+                            <legend>Ganhos & Despesas</legend>
+
+                            <label for="earnings">Ganhos:</label>
+                            <input type="text" name="earnings" id="earnings" placeholder="Ganhos">
+
+                            <label for="expenses">Despesas:</label>
+                            <input type="text" name="expenses" id="expenses" placeholder="Despesas">
+
+                            <button type="button" onclick="handleRegisterValues()">Registrar</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </main>
+
+            <footer>
+                <h3>© Copyright 2022 - Ganhos x Despesas</h3>
+                <p>Todos os direitos reservados.</p>
+            </footer>
+
+        </div>
+    </body>
+
+</html>

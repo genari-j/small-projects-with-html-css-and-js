@@ -34,7 +34,7 @@
 * Um projeto para visualizar as tarefas sendo inseridas em tela com base nos valores inseridos;
 * A lógica do código também nos permite marcarmos cada tarefa com finalizada ou até mesmo deletá-las;
 
-## Caixa Familiar
+## Ganhos x Despesas
 
 * Um mini sistema para controle de gastos;
 * Insira os valores de ganhos/gastos e veja um total sobre eles;

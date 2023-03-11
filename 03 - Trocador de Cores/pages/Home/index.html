@@ -7,8 +7,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name='author' content='João Victor Genari'>
-    <meta name='description' content='Tenha acesso com facilidade ao resultado do seu Índice de Massa Corporal'>
-    <meta name='keywords' content='Índice, Massa, Corporal, Peso, Altura, Saúde, Cardíaco, Coração'>
+    <meta name='description' content='Veja como criar uma lógica para trocar cores em partes da sua aplicação'>
+    <meta name='keywords' content='Cores, Trocar cores, Liga e Desliga, Interruptor, Jogo de cores'>
     <!-- Google Fonts -->
     <link rel='preconnect' href='https://fonts.googleapis.com'>
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
@@ -25,7 +25,7 @@
     <!-- Icons -->
     <script src="https://unpkg.com/phosphor-icons"></script>
     <!-- Title -->
-    <title>Índice de Massa Corporal</title>
+    <title>Trocador de Cores</title>
 
     <head>
 
@@ -34,28 +34,23 @@
 
             <div class="content">
 
-                <div class="titleAndPulse">
-                    <h2>Saiba seu IMC</h2>
-                    <div class="pulse"></div>
+                <h2>Trocador de Cores</h2>
+
+                <div class="card" id="card">
+                    <select name="colors" id="colors">
+                        <option value="none">Escolha uma cor</option>
+                        <option value="blue">Azul</option>
+                        <option value="yellow">Amarelo</option>
+                        <option value="green">Verde</option>
+                        <option value="red">Vermelho</option>
+                        <option value="black">Preto</option>
+                    </select>
+                    <button type="button" onclick="changeBackgroundColor()">Set Color</button>
                 </div>
 
-                <label for="weight">Peso:</label>
-                <div>
-                    <input type="text" name="weight" id="weight" placeholder="Peso">
-                    <i class="ph-fill ph-scales"></i>
+                <div class="button" onclick="changeBackgroundColorOfAllPage()">
+                    <div class="ball"></div>
                 </div>
-
-                <label for="height">Altura:</label>
-                <div>
-                    <input type="text" name="height" id="height" placeholder="Altura">
-                    <i class="ph-fill ph-arrows-down-up"></i>
-                </div>
-
-                <div>
-                    <p id="result"></p>
-                </div>
-
-                <button type="button" onclick="handleCalculateIMC()">Calcular</button>
 
             </div>
 

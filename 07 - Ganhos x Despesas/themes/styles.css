@@ -1,0 +1,189 @@
+@import url('./rootVariables.css');
+
+/* Elementos com essa clase, irão existir
+Porém não serão visíveis no projeto
+Os elementos passam a ficar visíveis somente no
+Screen Reader */
+.screenReadersOnly {
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0, 0, 0, 0);
+
+    padding: 0;
+    margin: -1px;
+    border-width: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+
+/* Header */
+header {
+    width: 100%;
+    max-width: 1050px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 1rem 1rem 1rem;
+
+    border-bottom: 2px solid var(--green8);
+}
+
+header h2 {
+    text-shadow: 2px 3px 3px var(--black8);
+}
+
+
+
+/* Main */
+main {
+    width: 100%;
+    max-width: 1050px;
+}
+
+main .cardsContainer {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main .card {
+    width: 100%;
+    max-width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+main .card span {
+    font-weight: 600;
+}
+
+main .formContainer {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+main .formContainer div img {
+    width: 100%;
+    height: 100%;
+}
+
+main form {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main form fieldset {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+
+    border: 2px solid var(--green8);
+}
+
+main form fieldset legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+
+    text-shadow: 2px 3px 3px var(--black8);
+}
+
+main form fieldset label {
+    margin: 0 0 0.2rem 0;
+}
+
+main form fieldset input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0 0 1rem 0;
+    border-radius: 0.5rem;
+
+    transition: .3s;
+
+    border: 2px solid var(--black7);
+}
+
+main form fieldset input:hover {
+    border: 2px solid var(--black8);
+}
+
+main form fieldset input:focus {
+    border: 2px solid var(--black9);
+}
+
+main form fieldset button {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+
+    transition: .3s;
+}
+
+main form fieldset button:hover {
+    letter-spacing: 0.05rem;
+
+    color: var(--white9);
+    background: var(--green8);
+}
+
+main .cardsContainer div:nth-child(1) {
+    background: var(--green8);
+}
+
+main .cardsContainer div:nth-child(2) {
+    background: var(--red9);
+}
+
+main .cardsContainer div:nth-child(3) {
+    border: 2px solid var(--green8);
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    max-width: 1050px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 600;
+    padding: 1rem 1rem 0 1rem;
+
+    border-top: 2px solid var(--green8);
+}
