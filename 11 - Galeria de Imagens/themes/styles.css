@@ -29,7 +29,7 @@ main {
 main section {
     width: 100%;
 
-    column-count: 4;
+    column-count: 5;
     column-gap: 1.5rem;
 }
 
@@ -43,6 +43,21 @@ main section img {
     box-shadow: 0 0 0.5rem 0 var(--white9);
 }
 
+.firstColumn {
+    margin-top: 5rem;
+}
+
+.secondColumn {
+    margin-top: 5rem;
+}
+
+.thirdColumn {
+    margin-top: 5rem;
+}
+
+.fourthColumn {
+    margin-top: 5rem;
+}
 
 @media (max-width: 1040px) {
     .container {

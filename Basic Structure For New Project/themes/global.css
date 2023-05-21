@@ -1,41 +1,65 @@
+@import url('./colors.css');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-    outline: none;
-    text-decoration: none;
-    border: none;
-    list-style: none;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  list-style: none;
 
-    font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 a,
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    color: #000000;
+  color: var(--black9);
 }
 
 @media (max-width: 1080px) {
-    html {
-        font-size: 93.75%;
-    }
+  html {
+      font-size: 93.75%;
+  }
 }
 
 @media (max-width: 720px) {
-    html {
-        font-size: 87.5%;
-    }
+  html {
+      font-size: 87.5%;
+  }
+}
+
+/* Elementos com essa clase, irão existir,
+porém não serão visíveis no projeto.
+Os elementos passam a ficar visíveis somente no
+Screen Reader - Mecanismo de Buscas */
+.screenReadersOnly {
+  width: 1px;
+  height: 1px;
+
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+
+  padding: 0;
+  margin: -1px;
+  border-width: 0;
+}
+
+.disabled {
+  cursor: not-allowed;
 }
