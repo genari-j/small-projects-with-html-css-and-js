@@ -1,0 +1,855 @@
+/* ============== Valores Globais - RESET ============== */
+
+/* Aplicado em todo o documento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplicado em todo o documento */
+a {
+    text-decoration: none;
+}
+
+/* Aplicado em todo o documento */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Aplicado em todo o documento */
+ul {
+    list-style: none;
+}
+
+/* Aplicado em todo o documento */
+body {
+    font: 400 1.250rem 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background: var(--body-color);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+/* Aplicado em todos os títulos */
+.title {
+    font: 700 1.875rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
+
+/* Sendo aplicado em todos finais de sessões */
+.divider-1 {
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        hsla(var(--hue), 36%, 57%, 1),
+        hsla(var(--hue), 65%, 88%, 0.34));
+}
+
+.divider-2 {
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        hsla(var(--hue), 65%, 88%, 0.34),
+        hsla(var(--hue), 36%, 57%, 1));
+}
+
+/* Variáveis controlando todas as cores da página */
+:root {
+    --header-right: 4.5rem;
+
+    /* Colors */
+    --hue: 960;
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+}
+
+/* ============== LAYOUT - PÁGINAS ============== */
+
+.container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section .title {
+    margin-bottom: 1rem;
+}
+
+.section header {
+    margin-bottom: 4rem;
+}
+
+/* ============== NAVIGATION - MENU ============== */
+
+#header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 2rem;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--body-color);
+    width: 100%;
+}
+
+#header.scroll {
+    box-shadow: 5px 5px 5px;
+    transition: 0.5s;
+}
+
+nav {
+    height: var(--header-right);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    transition: color 0.3s;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--base-color);
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--base-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+
+    transition: width 0.2s;
+}
+
+/* Quando passar o mouse em cima, o after irá crescer a linha abaixo do título */
+/* Ou quando a sessão estiver ativa, também irá aparecer a linha */
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+nav .menu {
+    opacity: 0;
+    visibility: hidden;
+    top: -20rem;
+    transition: 0.5s;
+}
+
+nav .menu ul {
+    display: none;
+}
+
+nav.show .menu ul {
+    display: grid;
+}
+
+nav.show .menu {
+    opacity: 1;
+    visibility: visible;
+
+    background: var(--body-color);
+
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    place-content: center;
+}
+
+nav.show .menu {
+    display: grid;
+    place-content: center;
+}
+
+nav.show ul.grid {
+    gap: 1.5rem;
+}
+
+.toggle {
+    color: var(--base-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav .icon-log-out {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+
+    transition: 0.2s;
+}
+
+nav.show div.icon-log-out {
+    visibility: visible;
+    opacity: 1;
+    top: 1.5rem;
+}
+
+.logo {
+    font: 700 1.45rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
+
+.logo span {
+    color: var(--base-color);
+}
+
+.logo-footer span {
+    color: white;
+}
+
+/* ============== COMPANY - MAIN ============== */
+
+main {
+    margin-top: calc(var(--header-right) + 2rem);
+}
+
+#company {
+    overflow: hidden;
+}
+
+#company .container {
+    margin: 0;
+}
+
+#company .image {
+    position: relative;
+}
+
+#company .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color);
+    position: absolute;
+    top: -17%;
+    left: 17%;
+    z-index: 0;
+}
+
+#company .image img {
+    position: relative;
+    right: 2.93rem;
+}
+
+#company .image img,
+#company .image::before {
+    border-radius: 0.25rem;
+}
+
+#company .text h1 {
+    margin-bottom: 1rem;
+}
+
+#company .text p {
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+#company .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+}
+
+.button {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--base-color-alt);
+}
+
+/* ============== ADMINISTRATIVE - MAIN ============== */
+
+#administrative {
+    background: white;
+}
+
+#administrative .container {
+    margin: 0;
+}
+
+#administrative .image {
+    position: relative;
+}
+
+#administrative .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color);
+    position: absolute;
+    top: -10%;
+    left: -15%;
+    z-index: 0;
+}
+
+#administrative .image img {
+    position: relative;
+}
+
+#administrative .image img,
+#administrative .image::before {
+    border-radius: 0.25rem;
+}
+
+#administrative .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* ============== FINANCES - MAIN ============== */
+
+#finances {
+    overflow: hidden;
+}
+
+#finances {
+    background: white;
+}
+
+#finances .container {
+    margin: 0;
+}
+
+#finances .image {
+    position: relative;
+}
+
+#finances .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color);
+    position: absolute;
+    top: -15%;
+    right: -15%;
+    z-index: 0;
+}
+
+#finances .image img {
+    position: relative;
+}
+
+#finances .image img,
+#finances .image::before {
+    border-radius: 0.25rem;
+}
+
+#finances .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* ============== ADMINISTRATIVE - MAIN ============== */
+
+#recrutament {
+    background: white;
+}
+
+#recrutament .container {
+    margin: 0;
+}
+
+#recrutament .image {
+    position: relative;
+}
+
+#recrutament .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color);
+    position: absolute;
+    top: -10%;
+    left: -15%;
+    z-index: 0;
+}
+
+#recrutament .image img {
+    position: relative;
+}
+
+#recrutament .image img,
+#recrutament .image::before {
+    border-radius: 0.25rem;
+}
+
+#recrutament .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* ============== COMMERCIAL - MAIN ============== */
+
+#commercial {
+    overflow: hidden;
+}
+
+#commercial {
+    background: white;
+}
+
+#commercial .container {
+    margin: 0;
+}
+
+#commercial .image {
+    position: relative;
+}
+
+#commercial .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color);
+    position: absolute;
+    top: -15%;
+    right: -15%;
+    z-index: 0;
+}
+
+#commercial .image img {
+    position: relative;
+}
+
+#commercial .image img,
+#commercial .image::before {
+    border-radius: 0.25rem;
+}
+
+#commercial .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* ============== SERVICES - MAIN ============== */
+
+.cards.grid {
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 3.625rem 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: .25rem solid var(--base-color);
+    border-radius: .25rem .25rem 0 0;
+    text-align: center;
+}
+
+.card i {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    color: var(--base-color);
+}
+
+.card .title {
+    font-size: 1.5rem;
+    margin-bottom: .75rem;
+}
+
+/* ============== VENDORS - MAIN ============== */
+
+.vendors {
+    background: white;
+}
+
+.vendors blockquote {
+    padding: 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0.25rem;
+}
+
+.vendors blockquote p {
+    position: relative;
+    text-indent: 1.675rem;
+    margin-bottom: 1.5rem;
+    color: var(--title-color);
+}
+
+.vendors blockquote p span {
+    font: 700 2.5rem serif;
+    position: absolute;
+    top: -0.85rem;
+    left: -1.675rem;
+
+    color: var(--base-color);
+}
+
+.vendors cite {
+    display: flex;
+    align-items: center;
+}
+
+.vendors cite img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    clip-path: circle();
+    margin-right: 0.5rem;
+    border: none;
+}
+
+/* ============== CONTACT - MAIN ============== */
+
+#contact .grid {
+    gap: 4rem;
+}
+
+#contact .text p {
+    margin-bottom: 2rem;
+}
+
+#contact .button {
+    color: white;
+}
+
+#contact .button i,
+#contact ul li i {
+    font-size: 1.5rem;
+    margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+    gap: 2rem;
+}
+
+#contact ul li {
+    display: flex;
+    align-items: center;
+}
+
+#contact ul li i {
+    color: var(--base-color);
+}
+
+/* ============== FOOTER - MAIN ============== */
+
+footer {
+    background: var(--base-color);
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+footer .brand p {
+    color: var(--text-color-light);
+    margin-bottom: 0.75rem;
+}
+
+footer i {
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+}
+
+footer .social {
+    grid-auto-flow: column;
+    width: fit-content;
+}
+
+footer .social a {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+footer .social a:hover {
+    transform: translateY(-8px);
+}
+
+/* ============== BACK TO TOP - MAIN ============== */
+
+.back-to-top {
+    background: var(--base-color);
+
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+
+    padding: 0.3rem;
+    clip-path: circle();
+
+    font-size: 1.5rem;
+
+    color: var(--text-color-light);
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============== MEDIA QUERIES ============== */
+
+/* Extra large devices: 1200 > */
+
+@media (min-width: 1200px) {
+
+    /* Todas sessões */
+    .container {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 10rem 0;
+    }
+
+    .section header {
+        max-width: 32rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button {
+        height: 3.125rem;
+    }
+
+    /* Menu */
+    nav .menu {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+
+    nav .menu ul {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav .menu ul li a.title {
+        font: 400 1rem 'DM Sans', sans-serif;
+    }
+
+    nav .icon-menu {
+        display: none;
+    }
+
+    nav .menu ul li a.title.active {
+        font-weight: bold;
+    }
+
+    /* COMPANY */
+    #company .container {
+        grid-auto-flow: column;
+        width: fit-content;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    #company .image {
+        order: 1;
+    }
+
+    #company .text {
+        order: 0;
+        max-width: 24rem;
+        text-align: left;
+    }
+
+    /* ADMINISTRATIVE */
+    
+    #administrative .container {
+        margin: 0 auto;
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    /* FINANCES */
+
+    #finances .container {
+        margin: 0 auto;
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    #finances .image {
+        order: 1;
+    }
+
+    #finances .text {
+        order: 0;
+        max-width: 24rem;
+        text-align: left;
+    }
+
+    #finances .image::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: var(--base-color);
+        position: absolute;
+        top: -15%;
+        right: -12%;
+        z-index: 0;
+    }
+
+    /* HUMAN CAPITAL */
+
+    #recrutament .container {
+        margin: 0 auto;
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    /* COMMERCIAL */
+
+    #commercial .container {
+        margin: 0 auto;
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    #commercial .image {
+        order: 1;
+    }
+
+    #commercial .text {
+        order: 0;
+        max-width: 24rem;
+        text-align: left;
+    }
+
+    #commercial .image::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: var(--base-color);
+        position: absolute;
+        top: -15%;
+        right: -12%;
+        z-index: 0;
+    }
+
+    /* SERVICES */
+
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    /* VENDORS */
+
+    .vendors {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* CONTACT */
+
+    #contact .container {
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    #contact .text {
+        max-width: 25rem;
+    }
+
+    /* FOOTER */
+
+    footer .container {
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer.section {
+        padding: 2rem 0;
+    }
+
+    footer .logo {
+        font-size: 2.25rem;
+    }
+
+}
+
+/* Large devices: 1023 > */
+
+@media (min-width: 1023px) {
+}
+
+/* Large devices: 992 > */
+
+@media (min-width: 992px) {
+}
+
+
+/* Medium devices: 767 > */
+
+@media (min-width: 767px) {
+
+ nav .logo {
+    font-size: 1.65rem;
+ }
+
+ .toggle {
+    font-size: 2rem;
+}
+
+ footer .logo {
+    font-size: 1.85rem;
+}
+    
+}
